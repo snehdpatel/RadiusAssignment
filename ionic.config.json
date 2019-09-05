@@ -1,0 +1,7 @@
+{
+  "name": "repoDetails",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

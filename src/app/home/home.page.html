@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Github Repo Issues
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-input type="url" [(ngModel)]="githubUrl" placeholder="Enter github repo link here"></ion-input>
+    <ion-button [disabled]="isButtonDisabled" (click)="getDetails()">Get Details</ion-button>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="10">Total open issues</ion-col>
+        <ion-col size="2">{{One}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="10">Open issues that were opened in the last 24 hours</ion-col>
+        <ion-col size="2">{{Two}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="10">Open issues that were opened more than 24 hours ago but less than 7 days ago</ion-col>
+        <ion-col size="2">{{Three}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="10">Open issues that were opened more than 7 days ago</ion-col>
+        <ion-col size="2">{{Four}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
