@@ -24,8 +24,13 @@
 
 >> To run the code.
 1) I haven't worked on website sides so I'm not spending time on uploading the website to any platform.
-2) Instead I'll upload .apk and .ipa file so that you can check this mobile applications in your Android or Ios phones. 
-3) Also you can clone this repo and run "ionic serve" to check the website on your browser.
+2) Instead I'll upload .apk file so that you can check this mobile applications in your Android phones.
+3) Steps to follow:
+3.1) npm install
+3.2) ionic serve
+Those will launch the local website on your browser
+4) Or else you can just install GitHubDetailApp.apk to your phone.
+5) Not generating .ipa file for ios because it requires team/org name certificates and a lot of efforts.
 
 >> Given more time
 1) I could have learned to host the website.
