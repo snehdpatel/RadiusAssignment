@@ -22,12 +22,14 @@ export class HomeService {
     await this.loadingService.createLoadingIndicator();
     await this.loadingService.presentLoadingIndicator();
     this.issuesArray = [];
+    // replace required repo's name here
     const serviceURL = APIConstants.GET_GITHUB_ISSUES_API.replace('repoDetail', repoDetail);
     await this.getAllData(serviceURL, 1);
     return this.divide();
   }
 
   private async getAllData(serviceURL: string, pageNumber: number) {
+    // cant get more than 100 per page so, updating page number here
     const serviceUrlWithAllParameters = serviceURL.replace('pageNumber', pageNumber.toString());
     try {
       const data: any = await this.httpService.get(serviceUrlWithAllParameters);
@@ -35,6 +37,7 @@ export class HomeService {
         this.issuesArray.push(GithubIssueModel.castFromApi(element));
       });
       if (data.length === 100) {
+        // fetch till the last page of issues
         await this.getAllData(serviceURL, pageNumber + 1);
       }
     } catch (error) {

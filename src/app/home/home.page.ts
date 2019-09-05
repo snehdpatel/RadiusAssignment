@@ -9,6 +9,7 @@ import { StringHelper } from '../helpers/string.helper';
 })
 export class HomePage {
 
+  // The only variables I have not named properly.
   public One: number;
   public Two: number;
   public Three: number;
